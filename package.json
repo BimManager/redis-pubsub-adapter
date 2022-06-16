@@ -2,9 +2,11 @@
   "name": "redis-pubsub-adapter",
   "version": "1.0.0",
   "description": "A simple implementation of an adapter that listens to one channel, processes the incoming messages and sends the results to another channel",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "npx tsc && node ./dist/tests/integrationTests.js"
+    "build": "npx tsc",
+    "test": "npx tsc -p tsconfig.test.json && node ./dist/tests/integrationTests.js"
   },
   "repository": {
     "type": "git",
